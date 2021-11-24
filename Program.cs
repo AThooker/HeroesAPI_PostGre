@@ -20,6 +20,7 @@ namespace HeroesAPI
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.UseUrls("https://localhost:80", "https://localhost:443");
                     webBuilder.UseStartup<Startup>();
                 });
     }
